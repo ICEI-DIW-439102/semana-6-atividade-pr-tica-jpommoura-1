@@ -1,12 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>NexTrip - Seu roteiro ideal</title>
+    <link rel="icon" href="NxT-FaviconTransparente.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat:wght@300;400;500;600;700&display=swap">
 </head>
 <body>
-    
+
+    <!-- HEADER / NAVBAR -->
+    <header class="sticky-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg" style="max-width: 1400px; margin: 0 auto; padding: 12px 48px;">
+            <a class="navbar-brand logo" href="index.html">
+                <img src="NxT-Logo.svg" alt="NexTrip Logo">
+            </a>
+
+            <!-- Botão hamburguer (mobile) -->
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links do menu -->
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3 mt-3 mt-lg-0">
+                    <li class="nav-item">
+                        <a href="descubra.html" class="nav-link">Descubra</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="roteiros.html" class="nav-link">Roteiros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="favoritos.html" class="nav-link">Favoritos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sobre.html" class="nav-link">Sobre</a>
+                    </li>
+                    <li class="nav-item profile">
+                        <button class="profile-btn">
+                            <img src="user-icon.svg" alt="Perfil">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero text-center py-5">
+            <h1>Seu roteiro ideal começa aqui</h1>
+            <form class="search-box mt-4">
+                <div class="row justify-content-center g-2 search-row">
+                    <!-- Desktop: tudo em linha / Mobile: reorganizado -->
+                    <div class="col-12 col-sm-5 col-lg-5">
+                        <input type="text" class="search-text w-100" placeholder="Para onde você deseja ir?">
+                    </div>
+                    <div class="col-7 col-sm-3 col-lg-2">
+                        <input type="date" class="search-date w-100">
+                    </div>
+                    <div class="col-5 col-sm-2 col-lg-2">
+                        <button type="submit" class="search-btn w-100">Buscar</button>
+                    </div>
+                    <div class="col-12 col-sm-2 col-lg-3">
+                        <button type="button" class="new-route-btn w-100">Novo Roteiro</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- SUGESTÕES -->
+        <section class="destinos py-4">
+            <div class="main-container">
+            <h2>Sugestões para você</h2>
+            <div class="row g-4 mt-1">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <article class="card h-100">
+                        <img src="https://picsum.photos/id/10/400/250" alt="Grécia" class="card-img-viva">
+                        <div class="card-info">
+                            <h3>Grécia</h3>
+                            <p>Explore o azul infinito do Mediterrâneo.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <article class="card h-100">
+                        <img src="https://picsum.photos/id/13/400/250" alt="Montanhas" class="card-img-viva">
+                        <div class="card-info">
+                            <h3>Montanhas</h3>
+                            <p>O refúgio perfeito para quem busca paz.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <article class="card h-100">
+                        <img src="https://picsum.photos/id/28/400/250" alt="Florestas" class="card-img-viva">
+                        <div class="card-info">
+                            <h3>Florestas</h3>
+                            <p>Conecte-se com a natureza selvagem.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <article class="card h-100">
+                        <img src="https://picsum.photos/id/43/400/250" alt="Cidades Históricas" class="card-img-viva">
+                        <div class="card-info">
+                            <h3>Cidades Históricas</h3>
+                            <p>Caminhe por séculos de história viva.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="vermais">
+                <button class="vermais-btn">Ver mais</button>
+            </div>
+            </div><!-- /.main-container -->
+        </section>
+
+        <!-- ROTEIROS EM ALTA -->
+        <section class="emalta py-4">
+            <div class="main-container">
+            <h2>Roteiros em alta</h2>
+            <div class="row g-4 mt-1">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <article class="card h-100">
+                        <span class="card-badge">Destaque</span>
+                        <img src="https://picsum.photos/id/15/400/250" alt="Minas" class="card-img-viva">
+                        <div class="card-info">
+                            <h3>Cachoeiras de Minas</h3>
+                            <p>A calmaria que você precisa para o fim de semana.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <article class="card h-100">
+                        <img src="https://picsum.photos/id/16/400/250" alt="Jalapão" class="card-img-viva">
+                        <div class="card-info">
+                            <h3>Pôr do Sol no Jalapão</h3>
+                            <p>Um espetáculo de cores no coração do Brasil.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <article class="card h-100">
+                        <img src="https://picsum.photos/id/22/400/250" alt="Alpes" class="card-img-viva">
+                        <div class="card-info">
+                            <h3>Alpes Suíços</h3>
+                            <p>Aventura e neve para amantes de esportes.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <article class="card h-100">
+                        <img src="https://picsum.photos/id/54/400/250" alt="Paris" class="card-img-viva">
+                        <div class="card-info">
+                            <h3>Paris Noturna</h3>
+                            <p>A cidade luz vista sob um novo ângulo.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="vermais">
+                <button class="vermais-btn">Ver mais</button>
+            </div>
+            </div><!-- /.main-container -->
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape-container">
+            <h3>NexTrip</h3>
+            <p class="frase-efeito">Seu roteiro ideal começa aqui.</p>
+            <p class="copyright">&copy; 2026 NexTrip. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

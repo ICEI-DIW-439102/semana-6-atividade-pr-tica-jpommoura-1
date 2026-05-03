@@ -1,0 +1,230 @@
+/* =============================================
+   NEXTRIP — styles.css
+   Responsividade: Bootstrap 5 (sem @media)
+   ============================================= */
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'DM Serif Text', serif;
+}
+
+/* ── NAVBAR ── */
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff7b00 !important;
+}
+
+/* Hamburguer sem borda padrão do Bootstrap */
+.navbar-toggler {
+    border: 2px solid #ff7b00;
+    border-radius: 8px;
+    padding: 4px 8px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(255, 123, 0, 0.25);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ff7b00' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ── PERFIL ── */
+.profile-btn {
+    background: none;
+    border: 2px solid #ff7b00;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-top: 4px;
+}
+
+/* ── HERO ── */
+.hero {
+    padding: 40px 0;
+}
+
+.search-row {
+    max-width: 1100px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 48px;
+}
+
+/* ── SEARCH BOX ── */
+.search-text,
+.search-btn,
+.new-route-btn,
+.search-date {
+    height: 45px;
+    border-radius: 20px;
+    border: 2px solid #ff7b00;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.3s;
+}
+
+.search-text {
+    padding: 0 15px;
+}
+
+.search-date {
+    padding: 0 10px;
+    color: #666;
+}
+
+.search-btn,
+.new-route-btn {
+    padding: 0 20px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-btn {
+    background-color: white;
+    color: #ff7b00;
+}
+
+.search-btn:hover,
+.vermais-btn:hover {
+    background-color: #ff7b00;
+    color: white;
+    transform: scale(1.05);
+}
+
+.new-route-btn {
+    background-color: #ff7b00;
+    color: white;
+}
+
+.new-route-btn:hover {
+    background-color: #e66e00;
+    transform: scale(1.05);
+}
+
+/* ── SEÇÕES ── */
+.main-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 48px;
+    box-sizing: border-box;
+}
+
+/* Compensar margem negativa do Bootstrap row */
+.main-container > .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.destinos,
+.emalta {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* ── CARDS ── */
+.card {
+    background-color: white;
+    border: 2px solid #ff7b00;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-viva {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff7b00;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.card-info {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+/* ── VER MAIS ── */
+.vermais {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.vermais-btn {
+    background-color: white;
+    color: #ff7b00;
+    border: 2px solid #ff7b00;
+    border-radius: 20px;
+    padding: 12px 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ── FOOTER ── */
+.rodape {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.rodape h3 {
+    color: #ff7b00;
+    margin-bottom: 5px;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #888;
+    border-top: 1px solid #444;
+    display: inline-block;
+    padding-top: 15px;
+    width: 250px;
+}
